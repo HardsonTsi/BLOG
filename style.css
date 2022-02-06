@@ -1,10 +1,13 @@
-*{
+/*------------Initialisation de la page------------*/
+* {
     box-sizing: border-box;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
-body, html{
+
+body, html {
 
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
@@ -14,9 +17,9 @@ body, html{
     font-weight: 500;
     background-color: #FBFBFB;
 }
-                    /*------------Barre de navigation------------*/
-.topbar
-{
+
+/*------------Barre de navigation------------*/
+.topbar {
     z-index: 3;
     background: white;
     position: fixed;
@@ -25,17 +28,14 @@ body, html{
     right: 0%;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
-
 }
 
-.topbar nav
-{
+.topbar nav {
     float: left;
     padding: 30px;
 }
 
-.topbar nav a
-{
+.topbar nav a {
     color: #9f9f9f;
     font-weight: 500;
     padding: 0 53px;
@@ -43,96 +43,79 @@ body, html{
     line-height: 23px;
 }
 
-.topbar nav a:hover,  .topbar nav a.active
-{
+.topbar nav a:hover, .topbar nav a.active {
     color: black;
 }
 
-.topbar .social
-{
+.topbar .social {
     float: right;
     padding: 30px;
 }
 
-.social a
-{
+.social a {
     padding: 12px;
     opacity: 0.5;
 }
 
-.social a:hover
-{
+.social a:hover {
     opacity: 1;
 }
 
-                                /*------------Bannière------------*/
+/*------------Bannière------------*/
 
-.banniere
-{
+.banniere {
     width: 100%;
     height: 803px;
     background: no-repeat center center / cover url("Images/2.jpg");
 }
 
-                                /*------------Bas de la page------------*/
+/*------------Corps de la page------------*/
 
-.footer
-{
-    clear: both;
-}
 
-                                /*------------Corps de la page------------*/
-
-.main
-{
+.main {
     float: left;
     background: white;
-    width: calc(100% - 375px); 
-    /* height: auto; */
+    width: calc(100% - 375px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
     z-index: 2;
     position: relative;
 }
 
-.articles
-{
+/*Conteneur des articles*/
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+/*Article(s)*/
+.articles {
     max-width: 946px;
     padding-left: 333px;
     margin: 50px 0;
     position: relative;
     min-height: 171px;
 }
-.container
-{
-    max-width: 940px;
-    margin: 0 auto;
-}
 
-.articles-img
-{
+.articles-img {
     width: 308px;
     position: absolute;
     left: 0;
     top: 0;
-    /* float: left; */
     margin-right: 25px;
 }
 
-.articles-img img
-{
+.articles-img img {
     width: 100%;
     height: auto;
 }
 
-.article-date
-{
+.article-date {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 5px;
 }
 
-.article-title
-{
+.article-title {
     font-weight: bold;
     font-size: 2.25rem;
     line-height: 1.1;
@@ -140,19 +123,17 @@ body, html{
     margin: 0px 0px 15px 0px;
 }
 
-.articles a
-{
+.articles a {
     text-decoration: none;
     color: inherit;
 }
 
-.articles a:hover
-{
+.articles a:hover {
     text-decoration: underline;
 }
 
-.sidebar
-{
+/*Sidebar / Informations supplémentaires*/
+.sidebar {
     float: right;
     background: #FBFBFB;
     width: 375px;
@@ -162,96 +143,85 @@ body, html{
     position: relative;
 }
 
-.sidebar-title
-{
+.sidebar-title {
     font-size: 15px;
     color: black;
     margin: 35px 0px;
 }
 
-.sidebar-title:first-child
-{
+.sidebar-title:first-child {
     margin-top: 0px;
 }
 
-.sidebar a
-{
+.sidebar a {
     text-decoration: none;
     color: #9F9F9F;
 }
 
-.sidebar a:hover
-{
+.sidebar a:hover {
     text-decoration: underline;
 }
 
-.sidebar ul
-{
+.sidebar ul {
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 17px;
 }
 
-.sidebar li
-{
+.sidebar li {
     padding: 6px 0px;
 }
 
-.sidebar li:first-child
-{
+.sidebar li:first-child {
     padding-top: 0px;
 }
 
-.sidebar:last-child
-{
+.sidebar:last-child {
     padding-bottom: 0px;
 }
 
-.sidebar hr
-{
+.sidebar hr {
     border: none;
     height: 1px;
     background: #C4C4C4;
     margin: 50px 0px;
 }
 
-                                /*Responsive*/
+/*------------Bas de la page------------*/
 
-@media screen and (max-width: 1100px)
-{   
-    body
-    {
+.footer {
+    clear: both;
+}
+
+/*------------------Responsive------------------*/
+
+@media screen and (max-width: 1100px) {
+    body {
         display: block;
     }
 
-    .main, .sidebar
-    {
+    .main, .sidebar {
         width: 100%;
     }
 
-    .container .main
-    {
+    .container .main {
         overflow: hidden;
     }
 
 }
 
-@media screen and (max-width:740px)
-{  
+@media screen and (max-width: 740px) {
 
-    .container
-    {
+    .container {
         padding: 0 20px;
     }
 
-    .articles
-    {
+    .articles {
         padding-left: 0;
     }
 
-    .articles-img
-    {
+    .articles-img {
         position: static;
         margin-bottom: 1rem;
         display: block;
@@ -259,29 +229,24 @@ body, html{
     }
 }
 
-@media screen and (max-width: 862px)
-{
-    .topbar
-    {
+@media screen and (max-width: 862px) {
+    .topbar {
         position: absolute;
     }
 
-    .topbar nav, .topbar .social
-    {
+    .topbar nav, .topbar .social {
         float: none;
         text-align: center;
     }
 
-    .topbar nav a
-    {
+    .topbar nav a {
         margin: 5px 20px;
         white-space: nowrap;
         padding: 0;
         display: inline-block;
     }
 
-    .topbar .social
-    {
+    .topbar .social {
         padding-top: 0;
     }
 }
